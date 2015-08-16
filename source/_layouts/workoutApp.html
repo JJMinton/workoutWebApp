@@ -1,0 +1,71 @@
+---
+layout: default
+---
+<div class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">{{ page.title }}</h1>
+    <p class="post-meta">{{ page.date | date: "%b %-d, %Y" }}{% if page.author %} • {{ page.author }}{% endif %}{% if page.meta %} • {{ page.meta }}{% endif %}</p>
+  </header>
+    
+  <!-- All the necessary boxes for the webapp -->
+  <div class="row">
+        <div class="col-md-8">
+            You're currently doing:
+            <h2 id="current-name">
+                "Exercise Name"
+            </h2>
+            <img src="http://media-cache-ec0.pinimg.com/736x/45/a1/65/45a1651fb22a257011316493d7b150c4.jpg" alt="exercise name" height=400 id="current-img"/>
+            <p id="current-descrip">
+                Exercise description that is blah blah very interesting etc. etc. Lots more text here maybe.
+            </p>
+        </div>
+        <div class="col-md-4">
+            Next you'll be doing:
+            <h2 id="next-name">
+                "Exercise Name"
+            </h2>
+            <img src="http://media-cache-ec0.pinimg.com/736x/45/a1/65/45a1651fb22a257011316493d7b150c4.jpg" alt="exercise name" id="next-img"/>
+            <p id="next-descrip">
+                Exercise description that is blah blah very interesting etc. etc. Lots more text here maybe.
+            </p>
+        </div>
+  </div>
+  <div class="row">
+    <div class="col-md-8">
+        <div id="count-down">
+            <svg xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 26 26" width="50px" height="50px">
+            <g><path id="light1" d="m 24,13 a 11,11 0 1 1 -22,0 11,11 0 1 1 22,0 z" style="fill:#00ff2d;fill-opacity:1;stroke:black;stroke-width:2;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"/></g>
+            </svg>
+            <svg xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 26 26" width="50px" height="50px">
+            <g><path id="light2" d="m 24,13 a 11,11 0 1 1 -22,0 11,11 0 1 1 22,0 z" style="fill:#00ff2d;fill-opacity:1;stroke:black;stroke-width:2;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"/></g>
+            </svg>
+            <svg xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 26 26" width="50px" height="50px">
+            <g><path id="light3" d="m 24,13 a 11,11 0 1 1 -22,0 11,11 0 1 1 22,0 z" style="fill:#00ff2d;fill-opacity:1;stroke:black;stroke-width:2;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"/></g>
+            </svg>
+            <svg xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 26 26" width="50px" height="50px">
+            <g><path id="light4" d="m 24,13 a 11,11 0 1 1 -22,0 11,11 0 1 1 22,0 z" style="fill:#00ff2d;fill-opacity:1;stroke:black;stroke-width:2;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"/></g>
+            </svg>
+            <svg xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 26 26" width="50px" height="50px">
+            <g><path id="light5" d="m 24,13 a 11,11 0 1 1 -22,0 11,11 0 1 1 22,0 z" style="fill:#ff002d;fill-opacity:1;stroke:black;stroke-width:2;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"/></g>
+            </svg>
+        </div>
+        <div>
+            <h1 id="timer">
+                Go for 02:12:32     
+            </h1>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <h3 id="next-time">
+            This will go for 1:00
+        </h3>
+    </div>
+  </div>
+  
+  <!-- The workout content -->
+    {{ content }}
+
+  {% include workout.html %}
+
+</div>
