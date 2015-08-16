@@ -1,9 +1,11 @@
 # workoutWebApp
 A webapp to guide you through workouts.
 
+BUGS:
+ - Pressing the start button multiple times produces mutliple timers and screws everything up
 
 WIBNIS:
-3 - pause/reset buttons
-1 - total time for workout/time of finish.
-2 - Full screen mode
-4 - menu to start mid workout
+ - pause/reset buttons
+ - total time for workout/time of finish.
+ - Full screen mode
+ - menu to start mid workout
