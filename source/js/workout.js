@@ -1,56 +1,62 @@
+---
+---
+
 "use strict";
 function main(){
     var exercises = get_exercises();
     if(exercises.length==0){
         alert('This workout is empty!');
     }
-    var lights = {1: document.getElementById("light1"),
-                    2: document.getElementById("light2"),
-                    3: document.getElementById("light3"),
-                    4: document.getElementById("light4"),
-                    5: document.getElementById("light5")};
+    var lights = [document.getElementById("light1"),
+                  document.getElementById("light2"),
+                  document.getElementById("light3"),];
     var timer = document.getElementById("timer");
     var index = 0;
     var time = loadNextExercise(exercises, index, lights, timer);
     var countdownTimer;
+    //var noises = [new Audio('shortBeep.mp3'), new Audio('longBeep.mp3'), new Audio('finish.mp3')]
+    var noises = [new Audio("{{ "/media/shortBeep.mp3" | prepend: site.baseurl }}"),
+                  new Audio("{{ "/media/longBeep.mp3" | prepend: site.baseurl }}"),
+                  new Audio("{{ "/media/finish.mp3" | prepend: site.baseurl }}")];
 
     function nextExerciseContinue(){
         clearInterval(countdownTimer);
         index++;
         time = loadNextExercise(exercises, index, lights, timer)
-        console.log(time)
         resumeWorkout(time);
     }
 
     function resumeWorkout(time){
+        document.getElementById("button_start").onclick = null;
         if(time[1]>0){
-            countdownTimer = setInterval(function(){time = secondPassed(time, lights, timer, nextExerciseContinue);}, 1000);
+            countdownTimer = setInterval(function(){time = secondPassed(time, lights, timer, noises, nextExerciseContinue);}, 1000);
         }else{
-            countdownTimer = setInterval(function(){time = secondPassed(time, lights, timer,
+            countdownTimer = setInterval(function(){time = secondPassed(time, lights, timer, noises,
                 function(){document.getElementById("button_start").onclick = nextExerciseContinue;})},1000);
         }
     }
-
     document.getElementById("button_start").onclick = function(){resumeWorkout(time)};
     document.getElementById("button_start").focus();
 }
 
 
 
-function secondPassed(time, lights, timer, finishFunction){
-    console.log(time)
+function secondPassed(time, lights, timer, noises, finishFunction){
     //Set lights
     if(time[0]>0){
         time[0]--;
-        for(var i=0; i<time[0]; i++){
-           changeLight(lights[i+1], true); 
-        }
-        for(i=time[0]; i<5; i++){
-            changeLight(lights[i+1], false);
-        }
+        if(time[0]==0){
+            changeLights(lights, time[0], noises[1])
+        }else{
+            changeLights(lights, time[0], noises[0])
+        } 
     }else if(time[1]>0){
         time[1]--;
-        changeTime(timer, time[1]);
+        if(time[1]==0){
+            changeTime(timer, time[1], noises[2]);
+        }else{
+            changeTime(timer, time[1], null);
+        }
     }else{
         finishFunction();
     }
@@ -88,9 +94,7 @@ function loadNextExercise(exercises, index, lights, timer){
     document.getElementById("next-descrip").innerHTML = next.exercise.description;
     document.getElementById("next-img").src = next.exercise.image;
     setRepsTimer(document.getElementById("next-time"), next);
-    for(var i=0;i<5;i++){
-        changeLight(lights[i+1], true);
-    }
+    changeLights(lights, time[0]);
     return time;
 }
 
@@ -98,31 +102,34 @@ function loadNextExercise(exercises, index, lights, timer){
 function setRepsTimer(obj, exercise){
     if(exercise.time > 0){
         changeTime(obj, exercise.time);
-        return [5,exercise.time];
+        return [3,exercise.time];
     }else if(exercise.reps > 0){
         obj.innerHTML = exercise.reps + " repetions.";
-        return [5,0];
+        return [3,0];
     }else{
         obj.innerHTML = "0:00";
         return [0,0];
     }
 }
 
-function changeLight(obj, stop){
-    if(stop==true){
-        obj.style = "fill:#ff002d;fill-opacity:1;stroke:black;stroke-width:2;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
-    }else{
-        obj.style = "fill:#00ff2d;fill-opacity:1;stroke:black;stroke-width:2;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+function changeLights(lights, time, beep){
+    for(var i=0; i<time; i++){
+        lights[i].style = "fill:#ff002d;fill-opacity:1;stroke:black;stroke-width:2;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
     }
+    for(i=time; i<lights.length; i++){
+        lights[i].style = "fill:#00ff2d;fill-opacity:1;stroke:black;stroke-width:2;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+    }
+    if(beep){beep.play();}
 }
 
-function changeTime(obj, time){
+function changeTime(obj, time, beep){
     var seconds = time % 60;
     var minutes = (time-seconds)/60;
     if (seconds < 10){
         seconds = "0"+seconds;
     }
     obj.innerHTML = "Go for " + minutes + ":" + seconds;
+    if(beep){beep.play();}
 }
 
 

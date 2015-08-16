@@ -19,15 +19,15 @@ categories: workouts js
                       description: ""};
 
         var superset1 = {exercise:
-                        [{exercise: pushups, time: 0, reps: 20},
-                         {exercise: situps,  time: 0, reps: 30},
-                         {exercise: rest, time: 10, reps: 0}],
-                         reps: 3, rest: 60};
+                        [{exercise: pushups, time: 3, reps: 0},
+                         {exercise: situps,  time: 3, reps: 0},
+                         {exercise: rest, time: 3, reps: 0}],
+                         reps: 2, rest: 5};
         var superset2 = {exercise:
-                        [{exercise: pushups, time: 20, reps: 0},
-                         {exercise: situps,  time: 20, reps: 0},
-                         {exercise: rest, time: 10, reps: 0}],
-                         reps: 5, rest: 30};
+                        [{exercise: pushups, time: 2, reps: 0},
+                         {exercise: situps,  time: 0, reps: 10},
+                         {exercise: rest, time: 3, reps: 0}],
+                         reps: 1, rest: 3};
 
         var workout = [superset1, superset2];
 
