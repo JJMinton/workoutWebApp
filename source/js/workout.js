@@ -114,10 +114,10 @@ function setRepsTimer(obj, exercise){
 
 function changeLights(lights, time, beep){
     for(var i=0; i<time; i++){
-        lights[i].style = "fill:#ff002d;fill-opacity:1;stroke:black;stroke-width:2;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+        lights[i].style.fill = "#ff002d";
     }
     for(i=time; i<lights.length; i++){
-        lights[i].style = "fill:#00ff2d;fill-opacity:1;stroke:black;stroke-width:2;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+        lights[i].style.fill = "#00ff2d";
     }
     if(beep){beep.play();}
 }

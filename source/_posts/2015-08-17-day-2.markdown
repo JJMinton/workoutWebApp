@@ -8,82 +8,32 @@ categories: workouts js
 
 <script type="text/javascript">
     function get_exercises(){
-        var rest = {name: "Rest",
-                    image: "https://sp.yimg.com/ib/th?id=JN.Wsri7b6Vztk9RKtI52de%2bQ&pid=15.1&P=0&w=300&h=300",
-                    description: "Take it easy!"};
-
-        var trunkRotations= {name: "Trunk Rotations",
-                        image: "http://cdn2.theinertia.com/wp-content/uploads/2014/04/6757.jpg",
-                        description: "",};
-
-        var itbRolls = {name: "ITB Rolling",
-                        image: "http://www.physioadvisor.com.au/assets/256/images/18806256(300x300).jpg",
-                        description: "",};
-
-        var steamEngine= {name: "Steam Engine",
-                        image: "https://s-media-cache-ak0.pinimg.com/736x/2f/d0/c5/2fd0c555ccec8ad10e54d8a032da8218.jpg",
-                        description: "",};
-
-        var squats =  {name: "One Leg Squats",
-                        image: "http://optimumbody-fitness.com/wp-content/uploads/2013/11/single_leg_squat.jpg",
-                        description: "",};
-
-        var lunges = {name: "Normal Lunges",
-                        image: "http://assets.menshealth.co.uk/main/embedded/28737/lunge-maximise-every-muscle-fricker-20042012-mdn.jpg",
-                        description: "",};
-
-        var plankWalkUps= {name: "Plank Walk Ups",
-                        image: "http://www.menshealth.com/sites/menshealth.com/files/images/MH-exercise-plank-walkup_0.jpg",
-                        description: "",};
-
-        var sideLunges= {name: "Side Lunges",
-                        image: "http://www.womenshealthmag.com/files/images/1006-2pc-workout-lateral-lunge.jpg",
-                        description: "",};
-
-        var legRaises= {name: "Leg Raises",
-                        image: "http://www.inmotionlife.com/wp-content/uploads/Leg-Raises.jpg",
-                        description: "",};
-
-        var situps = {name: "Sit Ups",
-                      image: "https://s.yimg.com/fz/api/res/1.2/YQwGWGIhSX5iVlcCjvjdaA--/YXBwaWQ9c3JjaGRkO2g9NzE0O3E9OTU7dz0xMzAw/http://thumbs.dreamstime.com/z/sit-up-22769821.jpg",
-                      description: ""};
-
-        var warmup    = {exercise:
-                        [{exercise: trunkRotations, time: 20, reps: 0},
-                         {exercise: itbRolls, time: 10, reps: 0},
-                         {exercise: itbRolls, time: 10, reps: 0},
-                         {exercise: steamEngine, time: 20, reps: 0},
-                         {exercise: squats, time: 0, reps: 10},
-                         {exercise: squats, time: 0, reps: 10},],
-                         reps: 3, rest: -1};
-                         
-        var superset1 = {exercise:
-                        [{exercise: lunges, time: 0, reps: 12},
-                         {exercise: plankWalkUps,  time: 0, reps: 6},
-                         {exercise: sideLunges,  time: 0, reps: 12},
-                         {exercise: plankWalkUps, time: 0, reps: 6}],
-                         reps: 6, rest: -1};
-
-        var superset2 = {exercise:
-                        [{exercise: legRaises, time: 0, reps: 20},
-                         {exercise: situps,  time: 0, reps: 20}],
-                         reps: 3, rest: 10};
-
-        var workout = [warmup, superset1, superset2];
-
+        var library = exerciseLibrary();
         var exercises = [];
-        for (var supersetInd = 0; supersetInd < workout.length; supersetInd++){
-            for (var superrep=0; superrep < workout[supersetInd].reps; superrep++){
-                for (var exerciseInd=0; exerciseInd < workout[supersetInd].exercise.length; exerciseInd++){
-                    exercises.push(workout[supersetInd].exercise[exerciseInd]);
-                }
-            }
-            if(workout[supersetInd].rest>0){
-                exercises.push({exercise: rest, time: workout[supersetInd].rest, reps: 0});
-            }else if(workout[supersetInd].rest==0){
-                exercises.push({exercise: rest, time: 0, reps: 1});
-            }
+
+        for(var i=0; i<3; i++){
+            exercises.push({exercise: library.trunkRotations, time: 20, reps: 0});
+            exercises.push({exercise: library.itbRolls, time: 10, reps: 0});
+            exercises.push({exercise: library.itbRolls, time: 10, reps: 0});
+            exercises.push({exercise: library.steamEngine, time: 20, reps: 0});
+            exercises.push({exercise: library.squats, time: 0, reps: 10});
+            exercises.push({exercise: library.squats, time: 0, reps: 10});
         }
+                         
+        for(var i=0; i<6; i++){
+            exercises.push({exercise: library.lunges, time: 0, reps: 12});
+            exercises.push({exercise: library.plankWalkUps,  time: 0, reps: 6});
+            exercises.push({exercise: library.sideLunges,  time: 0, reps: 12});
+            exercises.push({exercise: library.plankWalkUps, time: 0, reps: 6});
+        }
+
+        for(var i=0; i<3; i++){
+            exercises.push({exercise: library.legRaises, time: 0, reps: 20});
+            exercises.push({exercise: library.situps,  time: 0, reps: 20});
+            exercises.push({exercise: library.rest, time: 10, reps: 0});
+        }
+        
+        exercises.pop();
 
         return exercises;
     }

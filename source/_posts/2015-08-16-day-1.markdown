@@ -8,75 +8,25 @@ categories: workouts js
 
 <script type="text/javascript">
     function get_exercises(){
-        var rest = {name: "Rest",
-                    image: "https://sp.yimg.com/ib/th?id=JN.Wsri7b6Vztk9RKtI52de%2bQ&pid=15.1&P=0&w=300&h=300",
-                    description: "Take it easy!"};
-
-        var starjumps = {name: "Star Jumps",
-                        image: "https://s-media-cache-ak0.pinimg.com/736x/d2/4b/87/d24b873fbf0349b398f76bc472404866.jpg",
-                        description: "",};
-
-        var armCircles= {name: "Arm Circles",
-                        image: "https://43a7df1622-custmedia.vresp.com/490b3bcb85/Endeavor%20Sports%20Performance-Athletic%20Development-Arm%20Circles.jpg",
-                        description: "",};
-
-        var trunkRotations= {name: "Trunk Rotations",
-                        image: "http://cdn2.theinertia.com/wp-content/uploads/2014/04/6757.jpg",
-                        description: "",};
-
-        var pushups = {name: "Push Ups",
-                    image: "https://s.yimg.com/fz/api/res/1.2/sb2rU9l1LCEc0Z0OK.mgdA--/YXBwaWQ9c3JjaGRkO2g9MzAwO3E9OTU7dz0zMDA-/http://www.thefatlossninja.com/wp-content/uploads/2012/03/push-up-exercise.jpg",
-                    description: "Keeping your body straight and your hands under your shoulders push up from a face down position."};
-
-        var situps = {name: "Sit Ups",
-                      image: "https://s.yimg.com/fz/api/res/1.2/YQwGWGIhSX5iVlcCjvjdaA--/YXBwaWQ9c3JjaGRkO2g9NzE0O3E9OTU7dz0xMzAw/http://thumbs.dreamstime.com/z/sit-up-22769821.jpg",
-                      description: ""};
-
-        var squats =  {name: "Squats",
-                        image: "http://www.rockwallrectech.com/wp-content/uploads/2015/03/Air-Squats.jpg",
-                        description: "",};
-
-        var backExtensions= {name: "Back Extensions",
-                        image: "http://idfa.ca/wp-content/uploads/2013/01/Lower-Back-Extension-600x334.jpg",
-                        description: "",};
-
-        var flutterKicks= {name: "Flutter Kicks",
-                        image: "http://cdn.triathlete-europe.competitor.com/files/2015/03/Flutter-Kicks-526x421.jpeg",
-                        description: "",};
-
-        var warmup    = {exercise:
-                        [{exercise: starjumps, time: 20, reps: 0},
-                         {exercise: armCircles, time: 20, reps: 0},
-                         {exercise: trunkRotations, time: 20, reps: 0},],
-                         reps: 3, rest: -1};
-                         
-        var superset1 = {exercise:
-                        [{exercise: pushups, time: 0, reps: 5},
-                         {exercise: situps,  time: 0, reps: 10},
-                         {exercise: squats, time: 0, reps: 15}],
-                         reps: 2, rest: 0};
-
-        var superset2 = {exercise:
-                        [{exercise: backExtensions, time: 0, reps: 10},
-                         {exercise: flutterKicks,  time: 20, reps: 0}],
-                         reps: 3, rest: -1};
-
-        var workout = [warmup, superset1, superset2];
-
+        var library = exerciseLibrary();
         var exercises = [];
-        for (var supersetInd = 0; supersetInd < workout.length; supersetInd++){
-            for (var superrep=0; superrep < workout[supersetInd].reps; superrep++){
-                for (var exerciseInd=0; exerciseInd < workout[supersetInd].exercise.length; exerciseInd++){
-                    exercises.push(workout[supersetInd].exercise[exerciseInd]);
-                }
-            }
-            if(workout[supersetInd].rest>0){
-                exercises.push({exercise: rest, time: workout[supersetInd].rest, reps: 0});
-            }else if(workout[supersetInd].rest==0){
-                exercises.push({exercise: rest, time: 0, reps: 1});
-            }
-        }
 
+        for(var i=0;i<3;i++){
+            exercises.push({exercise: library.starjumps, time: 20, reps: 0});
+            exercises.push({exercise: library.armCircles, time: 20, reps: 0});
+            exercises.push({exercise: library.trunkRotations, time: 20, reps: 0});
+        }
+                         
+        for(var i=0;i<2;i++){
+            exercises.push({exercise: library.pushups, time: 0, reps: 5});
+            exercises.push({exercise: library.situps,  time: 0, reps: 10});
+            exercises.push({exercise: library.squats, time: 0, reps: 15});
+        };
+        exercises.push({exercise: library.rest, time: 0, reps: 1});
+        for(var i=0; i<3; i++){
+            exercises.push({exercise: library.backExtensions, time: 0, reps: 10});
+            exercises.push({exercise: library.flutterKicks,  time: 20, reps: 0});
+        }
         return exercises;
     }
 </script>
