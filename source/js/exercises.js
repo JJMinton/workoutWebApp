@@ -1,21 +1,42 @@
 ---
 ---
 /*Exercises included are
- - rest
- - starjumps
- - armCircles
- - trunkRotations
- - pushups
- - situps
- - squats
- - backExtensions
- - flutterKicks
- - itbRolls
- - steamEngine
- - lunges
- - plankWalkUps
- - sideLunges
- - legRaises
+ -    rest:
+ -    starjumps:
+ -    armCircles:
+ -    trunkRotations:
+ -    pushups:
+ -    widepushups:
+ -    closepushups:
+ -    situps: 
+ -    sideCrunches: 
+ -    tuckVSnaps: 
+ -    pikeVSnaps: 
+ -    toeTouches: 
+ -    squats:  
+ -    jumpSquats:  
+ -    squatHold:  
+ -    backExtensions: 
+ -    backThings:
+ -    russianTwists:
+ -    flutterKicks:
+ -    bicycleKicks:
+ -    itbRolls:
+ -    steamEngine:
+ -    lunges:
+ -    jumpLunges:
+ -    plank:
+ -    sidePlankLeft:
+ -    sidePlankRight:
+ -    sideHipRaises:
+ -    plankWalkUps:
+ -    sideLunges:
+ -    legRaises:
+ -    sideLegRaises:
+ -    burpees:
+ -    birdDogs:
+ -    tipOvers:
+ -    mountainClimber:
  */
 
 function exerciseLibrary(){
@@ -41,21 +62,65 @@ function exerciseLibrary(){
             {name: "Push Ups",
             image: "https://s.yimg.com/fz/api/res/1.2/sb2rU9l1LCEc0Z0OK.mgdA--/YXBwaWQ9c3JjaGRkO2g9MzAwO3E9OTU7dz0zMDA-/http://www.thefatlossninja.com/wp-content/uploads/2012/03/push-up-exercise.jpg",
             description: "Keeping your body straight and your hands under your shoulders push up from a face down position."},
+        widepushups:
+            {name: "Wide Push Ups",
+            image: "",
+            description: "Keeping your body straight and your hands out from your shoulders push up from a face down position."},
+        closepushups:
+            {name: "Close Push Ups",
+            image: "",
+            description: "Keeping your body straight and your hands in from your shoulders (together) push up from a face down position."},
         situps: 
             {name: "Sit Ups",
             image: "https://s.yimg.com/fz/api/res/1.2/YQwGWGIhSX5iVlcCjvjdaA--/YXBwaWQ9c3JjaGRkO2g9NzE0O3E9OTU7dz0xMzAw/http://thumbs.dreamstime.com/z/sit-up-22769821.jpg",
             description: ""},
+        sideCrunches: 
+            {name: "Side Crunches",
+            image: "",
+            description: ""},
+        tuckVSnaps: 
+            {name: "Tuck V-Snaps",
+            image: "",
+            description: ""},
+        pikeVSnaps: 
+            {name: "Pike V-Snaps",
+            image: "",
+            description: ""},
+        toeTouches: 
+            {name: "Toe Touches",
+            image: "",
+            description: "Lie on back, raise left leg and right arm until touching vertically. Repeat with opposite side."},
         squats:  
             {name: "Squats",
             image: "http://www.rockwallrectech.com/wp-content/uploads/2015/03/Air-Squats.jpg",
+            description: "",},
+        jumpSquats:  
+            {name: "Jump Squats",
+            image: "",
+            description: "",},
+        squatHold:  
+            {name: "Squat Hold",
+            image: "",
             description: "",},
         backExtensions: 
             {name: "Back Extensions",
             image: "http://idfa.ca/wp-content/uploads/2013/01/Lower-Back-Extension-600x334.jpg",
             description: "",},
+        backThings:
+            {name: "Back Things",
+            image: "",
+            description: "Russian Twists?",},
+        russianTwists:
+            {name: "Russian Twists",
+            image: "",
+            description: "",},
         flutterKicks:
             {name: "Flutter Kicks",
             image: "http://cdn.triathlete-europe.competitor.com/files/2015/03/Flutter-Kicks-526x421.jpeg",
+            description: "",},
+        bicycleKicks:
+            {name: "Bicycle Kicks",
+            image: "",
             description: "",},
         itbRolls:
             {name: "ITB Rolling",
@@ -69,6 +134,26 @@ function exerciseLibrary(){
             {name: "Normal Lunges",
             image: "http://assets.menshealth.co.uk/main/embedded/28737/lunge-maximise-every-muscle-fricker-20042012-mdn.jpg",
             description: "",},
+        jumpLunges:
+            {name: "Jump Lunges",
+            image: "",
+            description: "",},
+        plank:
+            {name: "Plank",
+            image: "",
+            description: "",},
+        sidePlankLeft:
+            {name: "Side Plank (Left)",
+            image: "",
+            description: "",},
+        sidePlankRight:
+            {name: "Side Plank (Right)",
+            image: "",
+            description: "",},
+        sideHipRaises:
+            {name: "Side Hip Raises",
+            image: "",
+            description: "",},
         plankWalkUps:
             {name: "Plank Walk Ups",
             image: "http://www.menshealth.com/sites/menshealth.com/files/images/MH-exercise-plank-walkup_0.jpg",
@@ -80,6 +165,26 @@ function exerciseLibrary(){
         legRaises:
             {name: "Leg Raises",
             image: "http://www.inmotionlife.com/wp-content/uploads/Leg-Raises.jpg",
+            description: "",},
+        sideLegRaises:
+            {name: "Side Leg Raises",
+            image: "",
+            description: "",},
+        burpees:
+            {name: "Burpees",
+            image: "",
+            description: "",},
+        birdDogs:
+            {name: "Bird Dogs",
+            image: "",
+            description: "",},
+        tipOvers:
+            {name: "Tip Overs",
+            image: "",
+            description: "",},
+        mountainClimber:
+            {name: "Mountain Climber",
+            image: "",
             description: "",},
 
     }

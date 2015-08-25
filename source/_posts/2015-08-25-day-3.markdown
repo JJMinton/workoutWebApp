@@ -1,0 +1,41 @@
+---
+layout: workoutApp
+title:  "Day 3"
+date:   2015-08-25 18:43:00
+categories: workouts js
+
+---
+
+<script type="text/javascript">
+    function get_exercises(){
+        var library = exerciseLibrary();
+        var exercises = [];
+
+        for(var i=0; i<3; i++){
+            exercises.push({exercise: library.trunkRotations, time: 20, reps: 0});
+            exercises.push({exercise: library.itbRolls, time: 10, reps: 0});
+            exercises.push({exercise: library.itbRolls, time: 10, reps: 0});
+            exercises.push({exercise: library.steamEngine, time: 20, reps: 0});
+            exercises.push({exercise: library.squats, time: 0, reps: 10});
+            exercises.push({exercise: library.squats, time: 0, reps: 10});
+        }
+                         
+        for(var i=0;i<4;i++){
+            exercises.push({exercise: library.burpees, time: 30, reps: 0});
+            exercises.push({exercise: library.rest, time: 10, reps: 0});
+            exercises.push({exercise: library.squats, time: 30, reps: 0});
+            exercises.push({exercise: library.rest, time: 10, reps: 0});
+            exercises.push({exercise: library.burpees, time: 30, reps: 0});
+            exercises.push({exercise: library.rest, time: 10, reps: 0});
+            exercises.push({exercise: library.squatHold, time: 30, reps: 0});
+            exercises.push({exercise: library.rest, time: 30, reps: 0});
+        };
+        for(var i=0; i<3; i++){
+            exercises.push({exercise: library.backExtensions, time: 0, reps: 10});
+            exercises.push({exercise: library.birdDogs,  time: 0, reps: 16});
+            exercises.push({exercise: library.rest,  time: 10, reps: 0});
+        }
+        exercises.pop()
+        return exercises;
+    }
+</script>

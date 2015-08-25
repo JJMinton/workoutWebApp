@@ -1,0 +1,39 @@
+---
+layout: workoutApp
+title:  "Day 6"
+date:   2015-08-28 18:43:00
+categories: workouts js
+
+---
+
+<script type="text/javascript">
+    function get_exercises(){
+        var library = exerciseLibrary();
+        var exercises = [];
+
+        for(var i=0; i<3; i++){
+            exercises.push({exercise: library.trunkRotations, time: 20, reps: 0});
+            exercises.push({exercise: library.itbRolls, time: 10, reps: 0});
+            exercises.push({exercise: library.itbRolls, time: 10, reps: 0});
+            exercises.push({exercise: library.steamEngine, time: 20, reps: 0});
+            exercises.push({exercise: library.squats, time: 0, reps: 10});
+            exercises.push({exercise: library.squats, time: 0, reps: 10});
+        }
+                         
+        for(var i=0;i<4;i++){
+            exercises.push({exercise: library.squats, time: 0, reps: 24});
+            exercises.push({exercise: library.lunges, time: 0, reps: 24});
+            exercises.push({exercise: library.plank,  time: 60, reps: 0});
+            exercises.push({exercise: library.jumpSquats,  time: 0, reps: 12});
+            exercises.push({exercise: library.jumpLunges, time: 0, reps: 12});
+        };
+        exercises.push({exercise: library.rest, time: 0, reps: 1});
+        for(var i=0; i<5; i++){
+            exercises.push({exercise: library.burpees, time: 30, reps: 0});
+            exercises.push({exercise: library.tuckVSnaps,  time: 30, reps: 0});
+            exercises.push({exercise: library.rest,  time: 30, reps: 0});
+        }
+        exercises.pop();
+        return exercises;
+    }
+</script>

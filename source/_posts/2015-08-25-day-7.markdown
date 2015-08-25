@@ -1,0 +1,37 @@
+---
+layout: workoutApp
+title:  "Day 7"
+date:   2015-08-29 18:43:00
+categories: workouts js
+
+---
+
+<script type="text/javascript">
+    function get_exercises(){
+        var library = exerciseLibrary();
+        var exercises = [];
+
+        for(var i=0; i<3; i++){
+            exercises.push({exercise: library.trunkRotations, time: 20, reps: 0});
+            exercises.push({exercise: library.itbRolls, time: 10, reps: 0});
+            exercises.push({exercise: library.itbRolls, time: 10, reps: 0});
+            exercises.push({exercise: library.steamEngine, time: 20, reps: 0});
+            exercises.push({exercise: library.squats, time: 0, reps: 10});
+            exercises.push({exercise: library.squats, time: 0, reps: 10});
+        }
+                         
+        for(var i=0;i<3;i++){
+            exercises.push({exercise: library.sideCrunches, time: 30, reps: 0});
+            exercises.push({exercise: library.toeTouches, time: 30, reps: 0});
+            exercises.push({exercise: library.pushups, time: 20, reps: 0});
+            exercises.push({exercise: library.sideHipRaises, time: 15, reps: 0});
+            exercises.push({exercise: library.sideHipRaises, time: 15, reps: 0});
+            exercises.push({exercise: library.backThings, time: 30, reps: 0});
+            exercises.push({exercise: library.russianTwists, time: 30, reps: 0});
+            exercises.push({exercise: library.plank, time: 40, reps: 0});
+            exercises.push({exercise: library.rest,  time: 30, reps: 10});
+        };
+        exercises.pop();
+        return exercises;
+    }
+</script>
