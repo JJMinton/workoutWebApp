@@ -2,16 +2,14 @@
 A webapp to guide you through workouts.
 
 BUGS:
+ - Sounds do not work on some versions of Firefox
 
 WIBNIS:
+ - Add pictures to workouts; generate/find images
  - stretching routine
- - Add workouts
- - Imporve page formatting (image size, timer size, lights, button size etc.)
+ - Imporve page formatting (timer size, lights, button size etc.)
  - pause/reset buttons
- - total time for workout/time of finish.
  - Mobile format
  - Full screen mode
- - use library of workouts
  - menu to start mid workout
- - generate/find images
  - find nicer beeps
