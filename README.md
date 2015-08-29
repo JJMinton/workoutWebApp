@@ -8,7 +8,6 @@ WIBNIS:
  - Add pictures to workouts; generate/find images
  - stretching routine
  - Imporve page formatting (timer size, lights, button size etc.)
- - pause/reset buttons
  - Mobile format
  - Full screen mode
  - menu to start mid workout

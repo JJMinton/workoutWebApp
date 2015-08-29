@@ -32,14 +32,24 @@ function main(){
     }
 
     function resumeWorkout(time){
-        document.getElementById("button_start").onclick = null;
+        document.getElementById("button_start").innerHTML= "Pause";
+        document.getElementById("button_start").onclick = pauseWorkout;
         if(time[1]>0){
             countdownTimer = setInterval(function(){time = secondPassed(time, lights, timer, progressBar, noises, nextExerciseContinue);}, 1000);
         }else{
             countdownTimer = setInterval(function(){time = secondPassed(time, lights, timer, progressBar, noises,
-                function(){document.getElementById("button_start").onclick = nextExerciseContinue;})},1000);
+                function(){document.getElementById("button_start").innerHTML="Start";
+                            document.getElementById("button_start").onclick = nextExerciseContinue;})},1000);
         }
     }
+
+    function pauseWorkout(){
+        clearInterval(countdownTimer);
+        document.getElementById("button_start").innerHTML= "Start";
+        document.getElementById("button_start").onclick = function(){resumeWorkout(time)};
+        document.getElementById("button_start").focus();
+    }
+
     document.getElementById("button_start").onclick = function(){resumeWorkout(time)};
     document.getElementById("button_start").focus();
 }
@@ -76,10 +86,6 @@ function secondPassed(time, lights, timer, progressBar, noises, finishFunction){
     time[2]--;
     changeProgressBar(progressBar, time[2]);
     return time;
-}
-
-function pauseWorkout(){
-
 }
 
 
