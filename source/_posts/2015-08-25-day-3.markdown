@@ -3,6 +3,7 @@ layout: workoutApp
 title:  "Day 3"
 date:   2015-08-25 18:43:00
 categories: workouts js
+description: "Legs then back."
 
 ---
 
@@ -16,8 +17,8 @@ categories: workouts js
             exercises.push({exercise: library.itbRolls, time: 10, reps: 0});
             exercises.push({exercise: library.itbRolls, time: 10, reps: 0});
             exercises.push({exercise: library.steamEngine, time: 20, reps: 0});
-            exercises.push({exercise: library.squats, time: 0, reps: 10});
-            exercises.push({exercise: library.squats, time: 0, reps: 10});
+            exercises.push({exercise: library.oneLeggedSquats, time: 30, reps: 10});
+            exercises.push({exercise: library.oneLeggedSquats, time: 30, reps: 10});
         }
                          
         for(var i=0;i<4;i++){
@@ -31,8 +32,8 @@ categories: workouts js
             exercises.push({exercise: library.rest, time: 30, reps: 0});
         };
         for(var i=0; i<3; i++){
-            exercises.push({exercise: library.backExtensions, time: 0, reps: 10});
-            exercises.push({exercise: library.birdDogs,  time: 0, reps: 16});
+            exercises.push({exercise: library.backExtensions, time: 10, reps: 10});
+            exercises.push({exercise: library.birdDogs,  time: 32, reps: 16});
             exercises.push({exercise: library.rest,  time: 10, reps: 0});
         }
         exercises.pop()

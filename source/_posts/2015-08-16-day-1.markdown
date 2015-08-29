@@ -3,6 +3,7 @@ layout: workoutApp
 title:  "Day 1"
 date:   2015-08-16 18:43:00
 categories: workouts js
+description: Easy all round exercise.
 
 ---
 
@@ -18,13 +19,13 @@ categories: workouts js
         }
                          
         for(var i=0;i<2;i++){
-            exercises.push({exercise: library.pushups, time: 0, reps: 5});
-            exercises.push({exercise: library.situps,  time: 0, reps: 10});
-            exercises.push({exercise: library.squats, time: 0, reps: 15});
+            exercises.push({exercise: library.pushups, time: 7, reps: 5});
+            exercises.push({exercise: library.situps,  time: 18, reps: 10});
+            exercises.push({exercise: library.squats, time: 16, reps: 15});
         };
-        exercises.push({exercise: library.rest, time: 0, reps: 1});
+        exercises.push({exercise: library.rest, time: 60, reps: 1});
         for(var i=0; i<3; i++){
-            exercises.push({exercise: library.backExtensions, time: 0, reps: 10});
+            exercises.push({exercise: library.backExtensions, time: 10, reps: 10});
             exercises.push({exercise: library.flutterKicks,  time: 20, reps: 0});
         }
         return exercises;

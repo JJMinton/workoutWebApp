@@ -6,8 +6,8 @@
  -    armCircles:
  -    trunkRotations:
  -    pushups:
- -    widepushups:
- -    closepushups:
+ -    widePushups:
+ -    closePushups:
  -    situps: 
  -    sideCrunches: 
  -    tuckVSnaps: 
@@ -16,6 +16,7 @@
  -    squats:  
  -    jumpSquats:  
  -    squatHold:  
+ -    oneLeggedSquats:
  -    backExtensions: 
  -    backThings:
  -    russianTwists:
@@ -62,11 +63,11 @@ function exerciseLibrary(){
             {name: "Push Ups",
             image: "https://s.yimg.com/fz/api/res/1.2/sb2rU9l1LCEc0Z0OK.mgdA--/YXBwaWQ9c3JjaGRkO2g9MzAwO3E9OTU7dz0zMDA-/http://www.thefatlossninja.com/wp-content/uploads/2012/03/push-up-exercise.jpg",
             description: "Keeping your body straight and your hands under your shoulders push up from a face down position."},
-        widepushups:
+        widePushups:
             {name: "Wide Push Ups",
             image: "",
             description: "Keeping your body straight and your hands out from your shoulders push up from a face down position."},
-        closepushups:
+        closePushups:
             {name: "Close Push Ups",
             image: "",
             description: "Keeping your body straight and your hands in from your shoulders (together) push up from a face down position."},
@@ -100,6 +101,10 @@ function exerciseLibrary(){
             description: "",},
         squatHold:  
             {name: "Squat Hold",
+            image: "",
+            description: "",},
+        oneLeggedSquats:  
+            {name: "One Legged Squats",
             image: "",
             description: "",},
         backExtensions: 

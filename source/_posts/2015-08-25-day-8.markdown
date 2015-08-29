@@ -1,8 +1,9 @@
 ---
 layout: workoutApp
-title:  "Day 1"
+title:  "Day 8"
 date:   2015-08-16 18:43:00
 categories: workouts js
+description: "Hard core core workout."
 
 ---
 
@@ -16,8 +17,8 @@ categories: workouts js
             exercises.push({exercise: library.itbRolls, time: 10, reps: 0});
             exercises.push({exercise: library.itbRolls, time: 10, reps: 0});
             exercises.push({exercise: library.steamEngine, time: 20, reps: 0});
-            exercises.push({exercise: library.squats, time: 0, reps: 10});
-            exercises.push({exercise: library.squats, time: 0, reps: 10});
+            exercises.push({exercise: library.oneLeggedSquats, time: 30, reps: 10});
+            exercises.push({exercise: library.oneLeggedSquats, time: 30, reps: 10});
         }
                          
         for(var i=0;i<3;i++){

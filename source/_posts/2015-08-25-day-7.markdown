@@ -3,6 +3,7 @@ layout: workoutApp
 title:  "Day 7"
 date:   2015-08-29 18:43:00
 categories: workouts js
+description: "Three sets of eight timed core exercises."
 
 ---
 
@@ -16,8 +17,8 @@ categories: workouts js
             exercises.push({exercise: library.itbRolls, time: 10, reps: 0});
             exercises.push({exercise: library.itbRolls, time: 10, reps: 0});
             exercises.push({exercise: library.steamEngine, time: 20, reps: 0});
-            exercises.push({exercise: library.squats, time: 0, reps: 10});
-            exercises.push({exercise: library.squats, time: 0, reps: 10});
+            exercises.push({exercise: library.oneLeggedSquats, time: 30, reps: 10});
+            exercises.push({exercise: library.oneLeggedSquats, time: 30, reps: 10});
         }
                          
         for(var i=0;i<3;i++){
@@ -29,7 +30,7 @@ categories: workouts js
             exercises.push({exercise: library.backThings, time: 30, reps: 0});
             exercises.push({exercise: library.russianTwists, time: 30, reps: 0});
             exercises.push({exercise: library.plank, time: 40, reps: 0});
-            exercises.push({exercise: library.rest,  time: 30, reps: 10});
+            exercises.push({exercise: library.rest,  time: 30, reps: 1});
         };
         exercises.pop();
         return exercises;

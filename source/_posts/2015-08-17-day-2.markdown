@@ -3,6 +3,7 @@ layout: workoutApp
 title:  "Day 2"
 date:   2015-08-17 09:00:00
 categories: workouts js
+description: "Six sets of legs and arms then tough stomach workout."
 
 ---
 
@@ -16,20 +17,20 @@ categories: workouts js
             exercises.push({exercise: library.itbRolls, time: 10, reps: 0});
             exercises.push({exercise: library.itbRolls, time: 10, reps: 0});
             exercises.push({exercise: library.steamEngine, time: 20, reps: 0});
-            exercises.push({exercise: library.squats, time: 0, reps: 10});
-            exercises.push({exercise: library.squats, time: 0, reps: 10});
+            exercises.push({exercise: library.oneLeggedSquats, time: 30, reps: 10});
+            exercises.push({exercise: library.oneLeggedSquats, time: 30, reps: 10});
         }
                          
         for(var i=0; i<6; i++){
-            exercises.push({exercise: library.lunges, time: 0, reps: 12});
-            exercises.push({exercise: library.plankWalkUps,  time: 0, reps: 6});
-            exercises.push({exercise: library.sideLunges,  time: 0, reps: 12});
-            exercises.push({exercise: library.plankWalkUps, time: 0, reps: 6});
+            exercises.push({exercise: library.lunges, time: 18, reps: 12});
+            exercises.push({exercise: library.plankWalkUps,  time: 10, reps: 6});
+            exercises.push({exercise: library.sideLunges,  time: 15, reps: 12});
+            exercises.push({exercise: library.plankWalkUps, time: 10, reps: 6});
         }
 
         for(var i=0; i<3; i++){
-            exercises.push({exercise: library.legRaises, time: 0, reps: 20});
-            exercises.push({exercise: library.situps,  time: 0, reps: 20});
+            exercises.push({exercise: library.legRaises, time: 40, reps: 20});
+            exercises.push({exercise: library.situps,  time: 40, reps: 20});
             exercises.push({exercise: library.rest, time: 10, reps: 0});
         }
         

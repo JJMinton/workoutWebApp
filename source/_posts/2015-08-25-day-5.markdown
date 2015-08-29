@@ -3,6 +3,7 @@ layout: workoutApp
 title:  "Day 5"
 date:   2015-08-27 18:43:00
 categories: workouts js
+description: "Four sets of one minute core exercises then two minutes of pressups."
 
 ---
 
@@ -16,8 +17,8 @@ categories: workouts js
             exercises.push({exercise: library.itbRolls, time: 10, reps: 0});
             exercises.push({exercise: library.itbRolls, time: 10, reps: 0});
             exercises.push({exercise: library.steamEngine, time: 20, reps: 0});
-            exercises.push({exercise: library.squats, time: 0, reps: 10});
-            exercises.push({exercise: library.squats, time: 0, reps: 10});
+            exercises.push({exercise: library.oneLeggedSquats, time: 30, reps: 10});
+            exercises.push({exercise: library.oneLeggedSquats, time: 30, reps: 10});
         }
                          
         for(var i=0;i<4;i++){
@@ -31,7 +32,7 @@ categories: workouts js
             exercises.push({exercise: library.rest, time: 15, reps: 0});
         };
         exercises.pop();
-        exercises.push({exercise: library.rest, time: 0, reps: 1});
+        exercises.push({exercise: library.rest, time: 30, reps: 1});
         exercises.push({exercise: library.pushups, time: 120, reps: 0});
         return exercises;
     }
