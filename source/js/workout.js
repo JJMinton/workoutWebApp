@@ -3,6 +3,7 @@
 
 "use strict";
 function main(){
+    //Define global constants and variables
     var exercises = get_exercises();
     if(exercises.length==0){
         alert('This workout is empty!');
@@ -20,14 +21,29 @@ function main(){
                   new Audio("{{ "/media/longBeep.mp3" | prepend: site.baseurl }}"),
                   new Audio("{{ "/media/finish.mp3" | prepend: site.baseurl }}")];
     var index = 0;
-    var time = loadNextExercise(exercises, index, lights, timer, progressBar);
     var countdownTimer;
-    //var noises = [new Audio('shortBeep.mp3'), new Audio('longBeep.mp3'), new Audio('finish.mp3')]
+    var time
+    loadExerciseAndStop(index);
 
-    function nextExerciseContinue(){
-        clearInterval(countdownTimer);
+    //Populate Dropdown menu
+    var dropdownList = document.getElementById("exerciseMenu");
+    for(var i=0; i<exercises.length; i++){
+        var item = document.createElement('li');
+        item.appendChild(document.createTextNode((i+1)+' - '+exercises[i].exercise.name));
+        item.onclick = (function(ind){return function(){loadExerciseAndStop(ind)}})(i);
+        dropdownList.appendChild(item)
+    }
+
+    //Load functions that access 'global variables'
+    function loadExerciseAndStop(index_local){
+        time = loadExercise(exercises, index_local, lights, timer, progressBar);
+        pauseWorkout();
+    }
+    
+    function loadNextExerciseAndContinue(){
         index++;
-        time = loadNextExercise(exercises, index, lights, timer, progressBar)
+        clearInterval(countdownTimer);
+        time = loadExercise(exercises, index, lights, timer, progressBar)
         resumeWorkout(time);
     }
 
@@ -35,11 +51,11 @@ function main(){
         document.getElementById("button_start").innerHTML= "Pause";
         document.getElementById("button_start").onclick = pauseWorkout;
         if(time[1]>0){
-            countdownTimer = setInterval(function(){time = secondPassed(time, lights, timer, progressBar, noises, nextExerciseContinue);}, 1000);
+            countdownTimer = setInterval(function(){time = secondPassed(time, lights, timer, progressBar, noises, loadNextExerciseAndContinue);}, 1000);
         }else{
             countdownTimer = setInterval(function(){time = secondPassed(time, lights, timer, progressBar, noises,
                 function(){document.getElementById("button_start").innerHTML="Start";
-                            document.getElementById("button_start").onclick = nextExerciseContinue;})},1000);
+                            document.getElementById("button_start").onclick = loadNextExerciseAndContinue;})},1000);
         }
     }
 
@@ -49,9 +65,6 @@ function main(){
         document.getElementById("button_start").onclick = function(){resumeWorkout(time)};
         document.getElementById("button_start").focus();
     }
-
-    document.getElementById("button_start").onclick = function(){resumeWorkout(time)};
-    document.getElementById("button_start").focus();
 }
 
 function getRemainingTime(exercises, index){
@@ -89,7 +102,7 @@ function secondPassed(time, lights, timer, progressBar, noises, finishFunction){
 }
 
 
-function loadNextExercise(exercises, index, lights, timer, progressBar){
+function loadExercise(exercises, index, lights, timer, progressBar){
     var finish= {exercise:
                 {name: "Finished!",
                 image: "http://blog.griffieworld.com/wp-content/uploads/2010/12/FinishFlag.jpg",
