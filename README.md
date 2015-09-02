@@ -10,5 +10,5 @@ WIBNIS:
  - Imporve page formatting (timer size, lights, button size etc.)
  - Mobile format
  - Full screen mode
- - menu to start mid workout
+ - Improve menu to start mid workout with categories or something
  - find nicer beeps

@@ -34,7 +34,19 @@ function main(){
         dropdownList.appendChild(item)
     }
 
-    //Load functions that access 'global variables'
+    //Populate sound controls
+    var volumeSlider = $("#volume");//document.getElementById("volume");
+    $("#volume").slider({
+        min: 0,
+        max: 100,
+        value: 50,
+        animate: true,
+        range: "min",
+        slide: function(event, ui){setVolume(noises, (ui.value)/100);}
+    });
+
+
+    //Load functions that change 'global variables'
     function loadExerciseAndStop(index_local){
         time = loadExercise(exercises, index_local, lights, timer, progressBar);
         pauseWorkout();
@@ -56,6 +68,12 @@ function main(){
             countdownTimer = setInterval(function(){time = secondPassed(time, lights, timer, progressBar, noises,
                 function(){document.getElementById("button_start").innerHTML="Start";
                             document.getElementById("button_start").onclick = loadNextExerciseAndContinue;})},1000);
+        }
+    }
+
+    function setVolume(noises, newVolume){
+        for(var noiseInd in noises){
+            noises[noiseInd].volume = newVolume;
         }
     }
 
