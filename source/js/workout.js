@@ -34,8 +34,7 @@ function main(){
         dropdownList.appendChild(item)
     }
 
-    //Populate sound controls
-    var volumeSlider = $("#volume");//document.getElementById("volume");
+    //Populate controls
     $("#volume").slider({
         min: 0,
         max: 100,
@@ -44,7 +43,11 @@ function main(){
         range: "min",
         slide: function(event, ui){setVolume(noises, (ui.value)/100);}
     });
-
+    var fullScreenButton = document.getElementById("fullscreen");
+    fullScreenButton.onclick = function(){
+        launchIntoFullscreen(document.documentElement);
+        document.getElementById("button_start").focus();
+    }
 
     //Load functions that change 'global variables'
     function loadExerciseAndStop(index_local){
@@ -212,5 +215,18 @@ function changeProgressBar(obj, time){
     obj[0].style.width = (100*time/max)+'%';
 }
 
+function launchIntoFullscreen(element){
+    if (element.requestFullscreen){
+        element.requestFullscreen();
+    }else if (element.mozRequestFullScreen){
+        element.mozRequestFullScreen();
+    }else if (element.webkitRequestFullscreen){
+        element.webkitRequestFullscreen();
+    }else if (element.msRequestFullscreen) {
+        element.msRequestFullscreen();
+    }else{
+        alert("You're browser does not support fullscreen mode")
+    }
+}
 
 window.onload = main;
