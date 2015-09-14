@@ -47,7 +47,7 @@ function stretchLibrary(){
             {name: "Box Splits",
             image: "",
             description: "Legs out sideways."},
-        catstretch:
+        catStretch:
             {name: "Cat Stretch",
             image: "",
             description: "On your hands and knees, flex and contract your back."},
@@ -67,11 +67,11 @@ function stretchLibrary(){
             {name: "Laying Twist (Right)",
             image: "",
             description: ""},
-        leftLayingQuad:
+        leftLayingQuadStretch:
             {name: "Laying Quad Stretch (Left)",
             image: "",
             description: ""},
-        rightLayingQuad:
+        rightLayingQuadStretch:
             {name: "Laying Quad Stretch (Right)",
             image: "",
             description: ""},
@@ -97,6 +97,14 @@ function stretchLibrary(){
             description: ""},
         rightShortCalfStretch:
             {name: "Short Calf Stretch (Right)",
+            image: "",
+            description: ""},
+        leftLongCalfStretch:
+            {name: "Long Calf Stretch (Left)",
+            image: "",
+            description: ""},
+        rightLongCalfStretch:
+            {name: "Long Calf Stretch (Right)",
             image: "",
             description: ""},
         leftStandingHipFlexors:

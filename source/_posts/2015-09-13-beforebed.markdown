@@ -18,18 +18,18 @@ description: All round 15 minute stretching routine to relax you into sleeping.
             exercises.push({exercise: slibrary.headCircles, time: 20, reps: 0});
             exercises.push({exercise: elibrary.armCircles, time: 20, reps: 0});
         }
-        exercises.push({exercise: slibrary.leftandRightHeadStretch, time: 20, reps: 0});
-        exercises.push({exercise: slibrary.leftandRightHeadStretch, time: 20, reps: 0});
+        exercises.push({exercise: slibrary.leftAndRightHeadStretch, time: 20, reps: 0});
+        exercises.push({exercise: slibrary.leftAndRightHeadStretch, time: 20, reps: 0});
                          
         //Standing legs
         exercises.push({exercise: slibrary.leftShortCalfStretch, time: 30, reps: 0});
         exercises.push({exercise: slibrary.rightShortCalfStretch, time: 30, reps: 0});
         exercises.push({exercise: slibrary.leftLongCalfStretch, time: 30, reps: 0});
         exercises.push({exercise: slibrary.rightLongCalfStretch, time: 30, reps: 0});
-        exercises.push({exercise: slibrary.standingToeTouches,  time: 30, reps: 0});
+        exercises.push({exercise: slibrary.standingToeTouchesStretch,  time: 30, reps: 0});
         exercises.push({exercise: slibrary.boxSplits, time: 30, reps: 0});
-        exercises.push({exercise: slibrary.leftHipFlexors, time: 30, reps: 0});
-        exercises.push({exercise: slibrary.rightHipFlexors, time: 30, reps: 0});
+        exercises.push({exercise: slibrary.leftStandingHipFlexors, time: 30, reps: 0});
+        exercises.push({exercise: slibrary.rightStandingHipFlexors, time: 30, reps: 0});
 
         //Standing arms
         exercises.push({exercise: slibrary.leftShoulderStretch, time: 30, reps: 0});
