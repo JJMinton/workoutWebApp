@@ -1,9 +1,9 @@
 ---
 layout: workoutApp
-title:  "Day 3"
+title:  "Burpees!"
 date:   2015-08-25 18:43:00
-categories: workouts js
-description: "Legs then back."
+categories: workouts js 20min general
+description: "3:1 cardio (burpees)"
 
 ---
 
@@ -20,22 +20,23 @@ description: "Legs then back."
             exercises.push({exercise: library.oneLeggedSquats, time: 30, reps: 10});
             exercises.push({exercise: library.oneLeggedSquats, time: 30, reps: 10});
         }
+        exercises.pop();
+        exercises.pop();
                          
-        for(var i=0;i<4;i++){
+        for(var i=0;i<3;i++){
             exercises.push({exercise: library.burpees, time: 30, reps: 0});
             exercises.push({exercise: library.rest, time: 10, reps: 0});
-            exercises.push({exercise: library.squats, time: 30, reps: 0});
+            exercises.push({exercise: library.situps, time: 30, reps: 0});
             exercises.push({exercise: library.rest, time: 10, reps: 0});
             exercises.push({exercise: library.burpees, time: 30, reps: 0});
             exercises.push({exercise: library.rest, time: 10, reps: 0});
-            exercises.push({exercise: library.squatHold, time: 30, reps: 0});
+            exercises.push({exercise: library.pushups, time: 30, reps: 0});
             exercises.push({exercise: library.rest, time: 30, reps: 0});
+            exercises.push({exercise: library.burpees, time: 30, reps: 0});
+            exercises.push({exercise: library.rest, time: 10, reps: 0});
+            exercises.push({exercise: library.backExtensions, time: 30, reps: 0});
+            exercises.push({exercise: library.rest, time: 10, reps: 0});
         };
-        for(var i=0; i<3; i++){
-            exercises.push({exercise: library.backExtensions, time: 10, reps: 10});
-            exercises.push({exercise: library.birdDogs,  time: 32, reps: 16});
-            exercises.push({exercise: library.rest,  time: 10, reps: 0});
-        }
         exercises.pop()
         return exercises;
     }

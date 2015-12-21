@@ -26,29 +26,31 @@ description: All round 15 minute stretching routine to relax you into sleeping.
         exercises.push({exercise: slibrary.rightShortCalfStretch, time: 30, reps: 0});
         exercises.push({exercise: slibrary.leftLongCalfStretch, time: 30, reps: 0});
         exercises.push({exercise: slibrary.rightLongCalfStretch, time: 30, reps: 0});
-        exercises.push({exercise: slibrary.standingToeTouchesStretch,  time: 30, reps: 0});
-        exercises.push({exercise: slibrary.boxSplits, time: 30, reps: 0});
-        exercises.push({exercise: slibrary.leftStandingHipFlexors, time: 30, reps: 0});
-        exercises.push({exercise: slibrary.rightStandingHipFlexors, time: 30, reps: 0});
 
         //Standing arms
         exercises.push({exercise: slibrary.leftShoulderStretch, time: 30, reps: 0});
         exercises.push({exercise: slibrary.rightShoulderStretch, time: 30, reps: 0});
         exercises.push({exercise: slibrary.leftTricepStretch, time: 30, reps: 0});
         exercises.push({exercise: slibrary.rightTricepStretch, time: 30, reps: 0});
-        exercises.push({exercise: slibrary.upwardStretch, time: 30, reps: 0});
+
+        //Leaning legs
+        exercises.push({exercise: slibrary.standingToeTouchesStretch,  time: 30, reps: 0});
+        exercises.push({exercise: slibrary.boxSplits, time: 30, reps: 0});
+        exercises.push({exercise: slibrary.leftStandingHipFlexors, time: 30, reps: 0});
+        exercises.push({exercise: slibrary.rightStandingHipFlexors, time: 30, reps: 0});
+        exercises.push({exercise: slibrary.rackArmStretch, time: 30, reps: 0});
 
         //Sitting legs and back
         exercises.push({exercise: slibrary.catStretch, time: 30, reps: 0});
         exercises.push({exercise: slibrary.leftSittingTwist, time: 30, reps: 0});
         exercises.push({exercise: slibrary.rightSittingTwist, time: 30, reps: 0});
-        exercises.push({exercise: slibrary.butterflyStretch, time: 30, reps: 0});
+        exercises.push({exercise: slibrary.butterflyStretch, time: 50, reps: 0});
 
         //Laying legs and back
-        exercises.push({exercise: slibrary.leftLayingQuadStretch, time: 30, reps: 0});
-        exercises.push({exercise: slibrary.rightLayingQuadStretch, time: 30, reps: 0});
         exercises.push({exercise: slibrary.leftLayingKneeToChest, time: 30, reps: 0});
         exercises.push({exercise: slibrary.rightLayingKneeToChest, time: 30, reps: 0});
+        exercises.push({exercise: slibrary.leftLayingQuadStretch, time: 30, reps: 0});
+        exercises.push({exercise: slibrary.rightLayingQuadStretch, time: 30, reps: 0});
         exercises.push({exercise: slibrary.leftLayingTwist, time: 30, reps: 0});
         exercises.push({exercise: slibrary.rightLayingTwist, time: 30, reps: 0});
 

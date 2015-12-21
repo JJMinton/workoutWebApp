@@ -1,9 +1,9 @@
 ---
 layout: workoutApp
-title:  "Day 4"
+title:  "Arms and Other"
 date:   2015-08-26 18:43:00
-categories: workouts js
-description: "Five sets of nine 30sec all round exercises."
+categories: workouts js arms general 30min
+description: "Five sets of eleven 30sec exercises with a focus on arms."
 
 ---
 
@@ -24,9 +24,11 @@ description: "Five sets of nine 30sec all round exercises."
             exercises.push({exercise: library.jumpSquats,  time: 27, reps: 0});
             exercises.push({exercise: library.widePushups,  time: 27, reps: 0});
             exercises.push({exercise: library.flutterKicks, time: 27, reps: 0});
-            exercises.push({exercise: library.closePushups, time: 27, reps: 0});
             exercises.push({exercise: library.tipOvers, time: 27, reps: 0});
+            exercises.push({exercise: library.closePushups, time: 27, reps: 0});
             exercises.push({exercise: library.sideLegRaises, time: 27, reps: 0});
+            exercises.push({exercise: library.sideLegRaises, time: 27, reps: 0});
+            exercises.push({exercise: library.tricepdips, time: 27, reps: 0});
             exercises.push({exercise: library.situps, time: 27, reps: 0});
         };
         return exercises;

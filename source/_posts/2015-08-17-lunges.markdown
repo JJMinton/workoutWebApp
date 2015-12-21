@@ -1,9 +1,9 @@
 ---
 layout: workoutApp
-title:  "Day 2"
+title:  "Lunges, Walk-ups and Stomach"
 date:   2015-08-17 09:00:00
-categories: workouts js
-description: "Six sets of legs and arms then tough stomach workout."
+categories: workouts js 20min general
+description: "Six sets of lunges and plank walk ups followed by leg raises and situps."
 
 ---
 
@@ -20,21 +20,23 @@ description: "Six sets of legs and arms then tough stomach workout."
             exercises.push({exercise: library.oneLeggedSquats, time: 30, reps: 10});
             exercises.push({exercise: library.oneLeggedSquats, time: 30, reps: 10});
         }
+            exercises.pop();
+            exercises.pop();
                          
-        for(var i=0; i<6; i++){
+        for(var i=0; i<5; i++){
             exercises.push({exercise: library.lunges, time: 18, reps: 12});
             exercises.push({exercise: library.plankWalkUps,  time: 10, reps: 6});
             exercises.push({exercise: library.sideLunges,  time: 15, reps: 12});
             exercises.push({exercise: library.plankWalkUps, time: 10, reps: 6});
         }
 
-        for(var i=0; i<3; i++){
+        for(var i=0; i<5; i++){
             exercises.push({exercise: library.legRaises, time: 40, reps: 20});
             exercises.push({exercise: library.situps,  time: 40, reps: 20});
             exercises.push({exercise: library.rest, time: 10, reps: 0});
         }
-        
         exercises.pop();
+        exercises.push({exercise: library.backExtensions, time:40, reps: 40});
 
         return exercises;
     }

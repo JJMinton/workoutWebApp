@@ -4,20 +4,22 @@ layout: default
 
 <div class="home">
 
-  <h1 class="page-heading">Select A Workout</h1>
-
   <ul class="post-list">
-    {% for post in site.categories.workouts %}
-      <li>
-        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
-        <h2>
-          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-        </h2>
-        {% if post.description %}
-            <p>{{ post.description }}</p>
-        {% endif %}
-      </li>
-    {% endfor %}
+    <li>
+        <a class="post-link" href="{{ '10min.html' | prepend: site.baseurl }}">10 Minute Workouts</a>
+    </li>
+    <li>
+        <a class="post-link" href="{{ '20min.html' | prepend: site.baseurl }}">20 Minute Workouts</a>
+    </li>
+    <li>
+        <a class="post-link" href="{{ '30min.html' | prepend: site.baseurl }}">30 Minute Workouts</a>
+    </li>
+    <li>
+        <a class="post-link" href="{{ 'stretching.html' | prepend: site.baseurl }}">Stretching</a>
+    </li>
+    <li>
+        <a class="post-link" href="{{ 'all.html' | prepend: site.baseurl }}">All</a>
+    </li>
   </ul>
 
   <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>

@@ -1,9 +1,9 @@
 ---
 layout: workoutApp
-title:  "Day 8"
+title:  "Timed Core"
 date:   2015-08-16 18:43:00
-categories: workouts js
-description: "Hard core core workout."
+categories: workouts js 20min core
+description: "Timed, with three reps of core superset."
 
 ---
 

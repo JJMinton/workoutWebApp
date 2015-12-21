@@ -5,6 +5,7 @@
  -    starjumps:
  -    armCircles:
  -    trunkRotations:
+ -    dynamicSideStretch:
  -    pushups:
  -    widePushups:
  -    closePushups:
@@ -17,6 +18,8 @@
  -    jumpSquats:  
  -    squatHold:  
  -    oneLeggedSquats:
+ -    calfRaisesLeft:
+ -    calfRaisesRight:
  -    backExtensions: 
  -    backThings:
  -    russianTwists:
@@ -32,6 +35,7 @@
  -    sideHipRaises:
  -    plankWalkUps:
  -    sideLunges:
+ -    jumpSideLunges:
  -    legRaises:
  -    sideLegRaises:
  -    burpees:
@@ -59,6 +63,10 @@ function exerciseLibrary(){
             {name: "Trunk Rotations",
             image: "http://cdn2.theinertia.com/wp-content/uploads/2014/04/6757.jpg",
             description: "",},
+        dynamicSideStretch:
+            {name: "Side Stretch Bends",
+            image: "",
+            description: "Dynamic side bend.",},
         pushups:
             {name: "Push Ups",
             image: "https://s.yimg.com/fz/api/res/1.2/sb2rU9l1LCEc0Z0OK.mgdA--/YXBwaWQ9c3JjaGRkO2g9MzAwO3E9OTU7dz0zMDA-/http://www.thefatlossninja.com/wp-content/uploads/2012/03/push-up-exercise.jpg",
@@ -107,6 +115,14 @@ function exerciseLibrary(){
             {name: "One Legged Squats",
             image: "",
             description: "",},
+        calfRaisesLeft:  
+            {name: "Calf Raises Left",
+            image: "",
+            description: "",},
+        calfRaisesRight:  
+            {name: "Calf Raises Right",
+            image: "",
+            description: "",},
         backExtensions: 
             {name: "Back Extensions",
             image: "http://idfa.ca/wp-content/uploads/2013/01/Lower-Back-Extension-600x334.jpg",
@@ -122,6 +138,10 @@ function exerciseLibrary(){
         flutterKicks:
             {name: "Flutter Kicks",
             image: "http://cdn.triathlete-europe.competitor.com/files/2015/03/Flutter-Kicks-526x421.jpeg",
+            description: "",},
+        reverseFlutterKicks:
+            {name: "Reverse Flutter Kicks",
+            image: "",
             description: "",},
         bicycleKicks:
             {name: "Bicycle Kicks",
@@ -166,6 +186,10 @@ function exerciseLibrary(){
         sideLunges:
             {name: "Side Lunges",
             image: "http://www.womenshealthmag.com/files/images/1006-2pc-workout-lateral-lunge.jpg",
+            description: "",},
+        jumpSideLunges:
+            {name: "Jump Side Lunges",
+            image: "",
             description: "",},
         legRaises:
             {name: "Leg Raises",

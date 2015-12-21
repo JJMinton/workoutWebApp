@@ -32,7 +32,7 @@ function stretchLibrary(){
             image: "",
             description: ""},
         leftTricepStretch:
-            {name: "Tricep Stretch (Right)",
+            {name: "Tricep Stretch (Left)",
             image: "",
             description: ""},
         rightTricepStretch:
@@ -87,6 +87,10 @@ function stretchLibrary(){
             {name: "Butterfly Stretch",
             image: "",
             description: ""},
+        layingButterflyStretch:
+            {name: "Laying Butterfly Stretch",
+            image: "",
+            description: ""},
         seatingStraddle:
             {name: "Seating Straddle",
             image: "",
@@ -123,6 +127,14 @@ function stretchLibrary(){
             {name: "Laying Knee to Chest (Right)",
             image: "",
             description: ""},
+        rackArmStretch:
+            {name: "Rack Arm Stretch",
+            image: "",
+            description: "Arms behind while sitting then slide hips forward."},
+        doorwayChestStretch:
+            {name: "Doorway Chest Stretch",
+            image: "",
+            description: "Arm against a doorway and walk through."},
 
     }
 

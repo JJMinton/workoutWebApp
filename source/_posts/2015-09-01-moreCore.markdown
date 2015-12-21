@@ -1,8 +1,8 @@
 ---
 layout: workoutApp
-title:  "Day 7"
+title:  "More Core"
 date:   2015-08-29 18:43:00
-categories: workouts js
+categories: workouts js 20min core
 description: "Three sets of eight timed core exercises."
 
 ---
@@ -24,10 +24,10 @@ description: "Three sets of eight timed core exercises."
         for(var i=0;i<3;i++){
             exercises.push({exercise: library.sideCrunches, time: 30, reps: 0});
             exercises.push({exercise: library.toeTouches, time: 30, reps: 0});
-            exercises.push({exercise: library.pushups, time: 20, reps: 0});
+            exercises.push({exercise: library.backExtensions, time: 30, reps: 0});
             exercises.push({exercise: library.sideHipRaises, time: 15, reps: 0});
             exercises.push({exercise: library.sideHipRaises, time: 15, reps: 0});
-            exercises.push({exercise: library.backThings, time: 30, reps: 0});
+            exercises.push({exercise: library.reverseFlutterKicks, time: 30, reps: 0});
             exercises.push({exercise: library.russianTwists, time: 30, reps: 0});
             exercises.push({exercise: library.plank, time: 40, reps: 0});
             exercises.push({exercise: library.rest,  time: 30, reps: 1});
