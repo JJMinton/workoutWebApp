@@ -28,7 +28,7 @@ description: "Five sets of eleven 30sec exercises with a focus on arms."
             exercises.push({exercise: library.closePushups, time: 27, reps: 0});
             exercises.push({exercise: library.sideLegRaises, time: 27, reps: 0});
             exercises.push({exercise: library.sideLegRaises, time: 27, reps: 0});
-            exercises.push({exercise: library.tricepdips, time: 27, reps: 0});
+            exercises.push({exercise: library.tricepDips, time: 27, reps: 0});
             exercises.push({exercise: library.situps, time: 27, reps: 0});
         };
         return exercises;

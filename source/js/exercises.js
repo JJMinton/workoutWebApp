@@ -9,6 +9,7 @@
  -    pushups:
  -    widePushups:
  -    closePushups:
+ -    tricepDips:
  -    situps: 
  -    sideCrunches: 
  -    tuckVSnaps: 
@@ -79,6 +80,10 @@ function exerciseLibrary(){
             {name: "Close Push Ups",
             image: "",
             description: "Keeping your body straight and your hands in from your shoulders (together) push up from a face down position."},
+        tricepDips:
+            {name: "Tricep Dips",
+            image: "",
+            description: ""},
         situps: 
             {name: "Sit Ups",
             image: "https://s.yimg.com/fz/api/res/1.2/YQwGWGIhSX5iVlcCjvjdaA--/YXBwaWQ9c3JjaGRkO2g9NzE0O3E9OTU7dz0xMzAw/http://thumbs.dreamstime.com/z/sit-up-22769821.jpg",
