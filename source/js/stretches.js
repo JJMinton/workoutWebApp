@@ -111,6 +111,14 @@ function stretchLibrary(){
             {name: "Long Calf Stretch (Right)",
             image: "",
             description: ""},
+        stepCalfStretch:
+            {name: "Step Calf Stretch",
+            image: "",
+            description: "Hells off edge of step, straight legs."},
+        stepCalfStretchBentLegs:
+            {name: "Step Bent Calf Stretch",
+            image: "",
+            description: "Hells off edge of step, bentstraight legs."},
         leftStandingHipFlexors:
             {name: "Standing Hip Flexors (Left)",
             image: "",

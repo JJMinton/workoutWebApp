@@ -21,6 +21,8 @@
  -    oneLeggedSquats:
  -    calfRaisesLeft:
  -    calfRaisesRight:
+ -    calfRaises:
+ -    soleusCalfRaises:
  -    backExtensions: 
  -    backThings:
  -    russianTwists:
@@ -39,6 +41,8 @@
  -    jumpSideLunges:
  -    legRaises:
  -    sideLegRaises:
+ -    hipAbductionsLeft:
+ -    hipAbductionsRight:
  -    burpees:
  -    birdDogs:
  -    tipOvers:
@@ -128,6 +132,14 @@ function exerciseLibrary(){
             {name: "Calf Raises Right",
             image: "",
             description: "",},
+        calfRaises:  
+            {name: "Calf Raises Both Legs",
+            image: "",
+            description: "Preferrably on a step",},
+        soleusCalfRaises:  
+            {name: "Soleus Calf Raises",
+            image: "",
+            description: "Calf raises with bent legs. Preferrably on a step",},
         backExtensions: 
             {name: "Back Extensions",
             image: "http://idfa.ca/wp-content/uploads/2013/01/Lower-Back-Extension-600x334.jpg",
@@ -202,6 +214,14 @@ function exerciseLibrary(){
             description: "",},
         sideLegRaises:
             {name: "Side Leg Raises",
+            image: "",
+            description: "",},
+        hipAbductionsLeft:
+            {name: "Hip Abductions (Left)",
+            image: "",
+            description: "",},
+        hipAbductionsLeft:
+            {name: "Hip Abductions (Right)",
             image: "",
             description: "",},
         burpees:
