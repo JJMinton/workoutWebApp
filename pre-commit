@@ -8,7 +8,6 @@ DEPLOYMENT_TARGET=jjm61@jeremyminton.co.nz:/var/www/jeremyminton.co.nz/workout_p
 BUILD_COMMAND="jekyll build --destination $BUILD_DIRECTORY"
 DEPLOY_COMMAND="rsync -avr --delete-after --delete-excluded $BUILD_DIRECTORY $DEPLOYMENT_TARGET"
 
-echo $DEPLOY_COMMAND
 # Check which branch it's on
 if [ $BRANCH == "deploy" ]; then
 
