@@ -5,9 +5,9 @@ description: > # this means to ignore newlines until "baseurl:"
   This is a webapp to guide you through workouts by providing
   timed exercise routines.
 baseurl: "" #/mnt/raid/Projects_Assorted/workoutWebApp/build/" # the subpath of your site, e.g. /blog/
-destination: "./build/"
+destination: "./build/workouts"
 source: "./source/"
-#baseurl: "/workouts/" #For build
+baseurl: "/workouts/" #For build
 url: "http://jeremyminton.co.nz" # the base hostname & protocol for your site
 
 
