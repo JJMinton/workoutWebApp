@@ -1,20 +1,35 @@
 ---
 ---
 /*Exercises included are
+########### Warm up #########
  -    rest:
  -    starjumps:
  -    armCircles:
  -    trunkRotations:
  -    dynamicSideStretch:
+ -    steamEngine:
+############  ARMS #########
  -    pushups:
  -    widePushups:
  -    closePushups:
  -    tricepDips:
+ -    plankWalkUps:
+############  STOMACH #########
  -    situps: 
  -    sideCrunches: 
  -    tuckVSnaps: 
  -    pikeVSnaps: 
  -    toeTouches: 
+ -    russianTwists:
+ -    flutterKicks:
+ -    bicycleKicks:
+ -    sidePlankLeft:
+ -    sidePlankRight:
+ -    sideHipRaises:
+ -    plank:
+ -    legRaises:
+ -    sideLegRaises:
+######### LEGS #########
  -    squats:  
  -    jumpSquats:  
  -    squatHold:  
@@ -23,24 +38,15 @@
  -    calfRaisesRight:
  -    calfRaises:
  -    soleusCalfRaises:
- -    backExtensions: 
- -    backThings:
- -    russianTwists:
- -    flutterKicks:
- -    bicycleKicks:
  -    itbRolls:
- -    steamEngine:
  -    lunges:
  -    jumpLunges:
- -    plank:
- -    sidePlankLeft:
- -    sidePlankRight:
- -    sideHipRaises:
- -    plankWalkUps:
  -    sideLunges:
  -    jumpSideLunges:
- -    legRaises:
- -    sideLegRaises:
+######### BACK #########
+ -    backExtensions: 
+ -    backThings:
+######### OTHER #########
  -    hipAbductionsLeft:
  -    hipAbductionsRight:
  -    burpees:
@@ -212,6 +218,14 @@ function exerciseLibrary(){
             {name: "Leg Raises",
             image: "http://www.inmotionlife.com/wp-content/uploads/Leg-Raises.jpg",
             description: "",},
+        sittingOneLegRaisesLeft:
+            {name: "Sitting One Leg Raises (Left)",
+            image: "",
+            description: "Sit in a pike position and raise your left leg keeping your knee locked.",},
+        sittingOneLegRaisesRight:
+            {name: "Sitting One Leg Raises (Right)",
+            image: "",
+            description: "Sit in a pike position and raise your right leg keeping your knee locked.",},
         sideLegRaises:
             {name: "Side Leg Raises",
             image: "",
@@ -220,8 +234,16 @@ function exerciseLibrary(){
             {name: "Hip Abductions (Left)",
             image: "",
             description: "",},
-        hipAbductionsLeft:
+        hipAbductionsRight:
             {name: "Hip Abductions (Right)",
+            image: "",
+            description: "",},
+        butterFlyHipAbductorsLeft:
+            {name: "Butterfly Hip Abductions (Left)",
+            image: "",
+            description: "",},
+        butterFlyHipAbductorsRight:
+            {name: "Butterfly Hip Abductions (Right)",
             image: "",
             description: "",},
         burpees:
