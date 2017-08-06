@@ -13,7 +13,7 @@ description: The twice daily routine I was given to strengthen my knee (5minutes
         var slibrary = stretchLibrary();
         var exercises = [];
 
-        for(i=0:i<3:i++){
+        for(var i=0; i<3; i++){
             exercises.push({exercise: elibrary.sittingOneLegRaisesLeft, time: 16, reps: 15});
             exercises.push({exercise: elibrary.sittingOneLegRaisesRight, time: 16, reps: 15});
             exercises.push({exercise: elibrary.butterFlyHipAbductorsLeft, time: 60, reps: 0});

@@ -38,7 +38,7 @@ function main(){
     $("#volume").slider({
         min: 0,
         max: 100,
-        value: 50,
+        value: 10,
         animate: true,
         range: "min",
         slide: function(event, ui){setVolume(noises, (ui.value)/100);}
@@ -50,8 +50,9 @@ function main(){
     }
 
     //Load functions that change 'global variables'
-    function loadExerciseAndStop(index_local){
-        time = loadExercise(exercises, index_local, lights, timer, progressBar);
+    function loadExerciseAndStop(idx){
+        index = idx;
+        time = loadExercise(exercises, idx, lights, timer, progressBar);
         pauseWorkout();
     }
     
@@ -88,9 +89,9 @@ function main(){
     }
 }
 
-function getRemainingTime(exercises, index){
+function getRemainingTime(exercises, idx){
     var totalTime = 0;
-    for(var exercise of exercises.slice(index)){
+    for(var exercise of exercises.slice(idx)){
         totalTime += 3;
         totalTime += exercise.time;
     }
@@ -123,17 +124,17 @@ function secondPassed(time, lights, timer, progressBar, noises, finishFunction){
 }
 
 
-function loadExercise(exercises, index, lights, timer, progressBar){
-    var finish= {exercise:
+function loadExercise(exercises, idx, lights, timer, progressBar){
+    var finish = {exercise:
                 {name: "Finished!",
                 image: "http://blog.griffieworld.com/wp-content/uploads/2010/12/FinishFlag.jpg",
                 description: "Congratulations, you're done!"},
                 reps: 0, time: 0};
     var current, next; 
-    if(index<exercises.length){
-        current = exercises[index];
-        if(index+1<exercises.length){
-            next=exercises[index+1];
+    if(idx<exercises.length){
+        current = exercises[idx];
+        if(idx+1<exercises.length){
+            next=exercises[idx+1];
         }else{
             next=finish;
         }
@@ -142,7 +143,7 @@ function loadExercise(exercises, index, lights, timer, progressBar){
         next = finish;
     }
     var time = setRepsTimer(timer, current);
-    var totalTime = getRemainingTime(exercises, index);
+    var totalTime = getRemainingTime(exercises, idx);
     document.getElementById("current-name").innerHTML = current.exercise.name;
     document.getElementById("current-descrip").innerHTML = current.exercise.description;
     document.getElementById("current-img").src = current.exercise.image;
