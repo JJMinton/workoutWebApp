@@ -21,6 +21,7 @@ function main(){
                   new Audio("{{ "/media/longBeep.mp3" | prepend: site.baseurl }}"),
                   new Audio("{{ "/media/finish.mp3" | prepend: site.baseurl }}")];
     var index = 0;
+    var initial_volume = 10; //percent
     var countdownTimer;
     var time
     loadExerciseAndStop(index);
@@ -38,7 +39,7 @@ function main(){
     $("#volume").slider({
         min: 0,
         max: 100,
-        value: 10,
+        value: initial_volume,
         animate: true,
         range: "min",
         slide: function(event, ui){setVolume(noises, (ui.value)/100);}
@@ -80,6 +81,7 @@ function main(){
             noises[noiseInd].volume = newVolume;
         }
     }
+    setVolume(noises, initial_volume/100);
 
     function pauseWorkout(){
         clearInterval(countdownTimer);
